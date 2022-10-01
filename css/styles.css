@@ -145,6 +145,10 @@ h2 {
     border-bottom: 1px solid #ECECEC;
 }
 
+.header.page1{
+    border-bottom:none;
+}
+
 .page-header-container{
     display:flex;
     align-items: center;
@@ -191,7 +195,7 @@ h2 {
 
 
 .menu-link-studio, .menu-link-portfolio, .menu-link-contact{
-    color: var(--accent-color);
+    color:#212121;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1;
@@ -199,23 +203,37 @@ h2 {
     transition: color var(--transition-dur-and-func);
     }
 
-    .menu-link-studio::after,
-    .menu-link-portfolio::after,
-    .menu-link-contact::after{
+    
+
+    .menu-link-studio:hover,
+    .menu-link-portfolio:hover,
+    .menu-link-contact:hover{
+        color: var(--accent-color);
+    }
+
+    .menu-link-studio.line::after{
     display: block;
     content:'';
     width:48px;
     height:4px;
     background-color: #2196F3;
     border-radius: 2px;
-    margin-top: 28px;
+    margin-top: 27px;
     position: absolute;
     z-index: 1;
-    top:7%;
 }
 
-.menu-link-portfolio::after{
-width:78px;
+.menu-link-portfolio.line::after{
+    display: block;
+     content: '';
+     width: 48px;
+     height: 4px;
+     background-color: #2196F3;
+     border-radius: 2px;
+     margin-top: 28px;
+     position: absolute;
+     z-index: 1;
+     width:78px;
 }
 
 .mail, .phone{
@@ -255,6 +273,10 @@ fill: var(--accent-color);
 .phone:focus .phone-icon,
 .phone:hover .phone-icon {
     fill: var(--accent-color);
+}
+
+.current-page {
+    color: var(--accent-color)
 }
 
 /* ==================== /HEADER ==================== */
